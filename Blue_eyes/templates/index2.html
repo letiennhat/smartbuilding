@@ -1,0 +1,352 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Le Tien Nhat
+	</title>
+	<meta name="author" content="Le Tien Nhat">
+	<meta name="keywords" content="AI,Le TIen Nhat">
+		
+		
+		<!-- <meta http-equiv="refresh" content="10"> -->
+	<meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/8/89/Logo_dhbkdn.jpg">
+
+	<link rel="stylesheet" type="text/css" href="login.css">
+	<header></header>
+	<style>
+		html {
+    margin: 0;
+    padding: 0;
+}
+ul{
+    font-size: 20pt;
+    color: rgb(255,0,0);
+    text-align: right;
+}
+
+
+.img-circle {
+    border: 3px solid white;
+    border-radius: 50%;
+}
+.section {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+#header {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqutVObmXQdkR60zTmpJ9Od3c1tWRr8bSTX-BPSJkUkPA7ZCE3");
+    background-size: cover;
+}
+#header img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+}
+#header p {
+    font-size: 25pt;
+    color: #3b464c;
+    padding-top: 5px;
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+}
+.quote {
+    font-size: 12pt;
+    text-align: right;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 2px solid #cecece;
+    border-collapse: collapse;
+    text-align: center;
+    table-layout: fixed;
+}
+.selected {
+    background-color: #f36f48;
+    font-weight: bold;
+    color: white;
+}
+li {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+progress {
+    width: 70%;
+    height: 20px;
+    color: #3fb6b2;
+    background: #efefef;
+}
+progress::-webkit-progress-bar {
+    background: #efefef;
+}
+progress::-webkit-progress-value {
+    background: #3fb6b2;
+} 
+progress::-moz-progress-bar {
+    color: #3fb6b2;
+    background: #efefef;
+}
+iframe, audio {
+    display: block;
+    margin: 0 auto;
+    border: 3px solid #3fb6b2;
+}
+hr {
+    border: 0;
+    height: 1px;
+    background: #f36f48;
+}
+form {
+    text-align: center;
+    margin-top: 0;
+}
+.submit {
+    background-color: #3fb6b2;
+    padding: 12px 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    margin: 0;
+    font-weight: bold;
+}
+.submit:hover {
+    background-color: #43a09d;
+}
+textarea {
+    height: 100px;
+}
+input, textarea {
+    margin-bottom: 10px;
+    font-size: 11pt;
+    padding: 15px 10px 10px;
+    border: 1px solid #cecece;
+    background-color: #efefef;
+    color: #787575;
+    border-radius: 5px;
+    width: 70%;
+    outline: none;
+}
+.face {
+    transform: scale(0.4);
+    margin: 0 auto;
+    display: block;
+    margin-top: -35px;
+    margin-bottom: -25px;
+}
+#contacts img {
+    height: 50px;
+    width: 50px;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+#contacts a {
+    text-decoration: none;
+}
+#contacts img:hover {
+    opacity: 0.8;
+}
+#contacts {
+    text-align: center;
+}
+.copyright {
+    font-size: 8pt;
+    text-align: right;
+    padding-bottom: 10px;
+    color: grey;
+}
+	</style>
+	<script>
+		var currentDate = new Date(),
+      day = currentDate.getDate(),
+      month = currentDate.getMonth() + 1,
+      year = currentDate.getFullYear(),
+  	
+  		hours = currentDate.getHours(),
+     	minutes = currentDate.getMinutes();
+
+	if (minutes < 10) {
+	 minutes = "0" + minutes;
+ 	 }
+
+	var suffix = "AM";
+	if (hours >= 12) {
+    suffix = "PM";
+    hours = hours - 12;
+	}
+	if (hours == 0) {
+	 hours = 12;
+	}
+	
+</script>
+	
+</head>
+<body background="static/logo.jpg" style="background-size :100%;background-repeat:no-repeat;background-position:center;background-attachment: fixed">
+	<p align="center"><h1 align="center">{{input_1}}</h1> </p>
+	<table align="center">
+ <tr><td>What Your name ? </td></tr>
+ <form class="forme" method="POST" action="{{ url_for('test') }}">
+ <tr>
+  <td colspan="3">
+   <textarea name = "text" id="inputTextToSave" style="width:200px;height:50px"></textarea>
+  </td>
+ </tr>
+ <tr>
+  <!--<td>Filename to Save As:</td>
+  <td><input id="inputFileNameToSaveAs"></input></td>-->
+  <td><button type="submit" class="btn btn-default" style="font-size : 50px; width: 100%; height: 80px;" >LOAD</button></td><!-- onclick="saveTextAsFile()" -->
+ </tr>
+</form>
+ <!--<tr>
+  <td>Select a File to Load:</td>
+  <td><input type="file" id="fileToLoad"></td>
+  <td><button onclick="loadFileAsText()">Load Selected File</button><td>
+ </tr>-->
+</table>
+
+
+<script type='text/javascript'>
+    function name_(val){
+        var c='';
+        val=val.split(" ")
+        for (var i=0;i<val.length;i++){
+            c+=val[i];
+        }
+        console.log(c);
+        return c
+    }
+    function titleCase(str) {
+        var splitStr = str.toLowerCase().split(' ');
+       for (var i = 0; i < splitStr.length; i++) {
+           // You do not need to check if i is larger than splitStr length, as your for does that for you
+           // Assign it back to the array
+           splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);     
+       }
+       // Directly return the joined string
+       return splitStr.join(' '); 
+    }
+
+    // document.write(("<h1 align='center' style='background-color:green'> I'm a robot</h1>"));
+
+    // titleCase("I'm a little tea pot");
+    function saveTextAsFile() { 
+        var textToWrite = document.getElementById("inputTextToSave").value;
+        // console.log(textToWrite);
+        textToWrite=titleCase(textToWrite);
+
+        textToWrite = name_(textToWrite);
+        // document.write("<"
+        console.log(textToWrite);
+        document.write(textToWrite);
+        var textFileAsBlob = new Blob([textToWrite], { type: 'text/plain' });
+        var fileNameToSaveAs = "input_1"//document.getElementById("inputFileNameToSaveAs").value;
+
+        var downloadLink = document.createElement("a");
+        downloadLink.download = fileNameToSaveAs;
+        downloadLink.innerHTML = "Download File";
+        if (window.webkitURL != null) {
+            // Chrome allows the link to be clicked
+            // without actually adding it to the DOM.
+            downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+        }
+        else {
+            // Firefox requires the link to be added to the DOM
+            // before it can be clicked.
+            downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+            downloadLink.onclick = destroyClickedElement;
+            downloadLink.style.display = "none";
+            document.body.appendChild(downloadLink);
+        }
+
+        downloadLink.click();
+    }
+</script>
+
+	<!-- <p align="center"><button  type="button"
+	onclick="document.getElementById('date_time_button').innerHTML = Date()">
+	Click and see Date and Time.</button></p> -->
+
+	<p id="date_time_button"></p>
+	<div style="float: center;font-size: 100%"><h1 align="center"><span style=" border: 2px dashed #20bcd5;
+    padding: 4px;">S - BUILDING<span></h1></div>
+	
+	<!--<p align="center"><img src ="https://upload.wikimedia.org/wikipedia/commons/8/89/Logo_dhbkdn.jpg" width="300" length = "300"/></p>-->
+	<!-- <div>
+		<table align="right" border="1" width="500" length="500">
+				<div style="float: right;"><strong><span style=" border: 2px dashed #20bcd5;
+    padding: 4px;"> Danh sách chưa vào tòa nhà </span></strong></div>
+				<br>
+				<br>
+				<tr>
+					<th>STT</th>
+					<td>Họ và Tên</td>
+				</tr>
+				{% for value in lit_vang %}
+            	<tr>
+               		<th> {{lit_vang.index(value)+1}} </th>
+               		<td> {{ value }} </td>
+            	</tr>
+         		{% endfor %}
+	         	
+		</table>
+	</div> -->
+	<div align="center" class="section">
+			<div align="center"><b style="float:center;"><span style=" border: 2px dashed #20bcd5;
+    padding: 4px;"> Danh sách đã vào tòa nhà</span></b></div>
+			<br>
+			<br>
+		<table align="center" border="1" width="500" length="500">
+				<tr>
+					<th>STT</th>
+					<td>ID/HovaTen</td>
+				</tr>
+			
+				{% for value in lit_comat %}
+            	<tr>
+               		<th> {{lit_comat.index(value)+1}} </th>
+               		<td> {{ value }} </td>
+            	</tr>
+         		{% endfor %}
+         	
+		</table>	
+	</div>
+	{%for i in range(30)%}
+	<br>
+	{% endfor %}
+    <!--
+	<div align="center" class="section">
+			<div align="center"><b style="float:center"><span style=" border: 2px dashed #20bcd5;
+    padding: 4px;"> Danh sách tòa nhà S</span></b></div>
+    		<br>
+    		<br>
+			<table align="center" border="1" width="500" length="500">
+				<tr>
+					<th>STT</th>
+					<td>Họ và Tên</td>
+
+					<td>Số buổi vắng</td>
+					<!--td>Trạng thái SV</td ->
+				</tr>
+				{% for value in lit_sv %}
+            	<tr>
+               		<th> {{lit_sv.index(value)+1 }} </th>
+               		<td> {{ value }} </td>
+               		<td> {{ lits[lit_sv.index(value)] }}</td>
+               		<!--td> {{ list_camxuc[lit_sv.index(value)] }}	</td ->
+         		{% endfor %}
+			</table>
+			
+			
+	</div>
+	<div class="section">
+	-->
+
+</body>
+</html>

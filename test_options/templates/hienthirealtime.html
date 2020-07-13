@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta http-equiv="refresh" content="1">
+</head>
+<body>
+
+
+  <div align="center" class="section">
+			<div align="center"><b style="float:center;"><span style=" border: 2px dashed #20bcd5;
+    padding: 4px;"> Danh sách đã vào tòa nhà</span></b></div>
+			<br>
+			<br>
+		<table align="center" border="2" width="300" length="500">
+				<tr>
+					<th>STT</th>
+					<td>ID/HovaTen</td>
+					<td id="demo">
+						<script>
+							
+							var d = new Date();
+							document.getElementById("demo").innerHTML = "Vào lúc "+ d.getHours()+' giờ';
+										
+									
+						</script>
+
+					</td>
+
+				</tr>
+			
+				{% for value in lit_comat %}
+            	<tr>
+               		<th> {{lit_comat.index(value)+1}} </th>
+               		<td> {{ value }} </td>
+            	</tr>
+         		{% endfor %}
+         	
+		</table>	
+	</div>
+	{%for i in range(30)%}
+	<br>
+	{% endfor %}
+
+</body>
+</html>

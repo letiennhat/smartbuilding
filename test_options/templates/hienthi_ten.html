@@ -1,0 +1,41 @@
+<form action="/name" method="POST">
+	<style type="text/css">
+		thead{
+			color: red;
+			font-size: 15px;
+
+		}
+		tbody{
+			color: green;
+		}
+	</style>
+	<table border="2" align = "center">
+		<thead>
+			<tr>
+				<th align="center">Mã Hồ Sơ</th>
+				<!--th align="center">STT</th-->
+				<th align="center">Họ và Tên</th>
+				<th align="center">Tên</th>
+				<th align="center">Ngày Sinh</th>
+				<th align="center">Giới tính</th>
+				<th align="center">Đơn vị</th>
+				<th align="center">Bộ môn</th>
+				<th align="center">Chức vụ</th>
+				<th align="center">Trình độ chuyên môn </th>
+				<th align="center">Học hàm</th>
+			</tr>
+		</thead>
+		<tbody>
+		{%for i in da%}
+		<tr>
+			
+				{%for j in i%}
+					<td> {{j}} </td>
+				{%endfor%}
+		</tr>
+		{%endfor%}
+		</tbody>
+	</table>
+
+	
+</form>

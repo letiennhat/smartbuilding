@@ -1,0 +1,9 @@
+{%if "base64" in tenanh%}
+	<img src="static/{{tenanh}}.jpg" width="100%" height="100%">
+{%elif "home" not in tenanh%}
+		<img src="static/{{tenanh}}" width="100%" height="100%">
+{%elif "jpg" not in tenanh%}
+		<img src="static/{{tenanh}}.jpg" width="100%" height="100%">
+{%elif "home" in tenanh%}
+		<img src="{{tenanh}}" width="100%" height="100%">
+{%endif%}

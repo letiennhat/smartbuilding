@@ -1,0 +1,11 @@
+<h1>Results Page multiple images!</h1>
+<a href="{{ url_for('uploadnhieuanh') }}">Back</a><p>
+
+<ul>
+{% for file_url in file_urls %}
+    <li><img style="height: 150px" src="{{ file_url }}"></li>
+{% endfor %}
+<form action="/uploaded_data" method="POST">
+    <input type="submit" value="Xác nhận chính xác" name="input_data"> 
+</form>
+</ul>

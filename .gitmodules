@@ -1,0 +1,6 @@
+[submodule "godofeye"]
+	path = godofeye
+	url = https://github.com/oscarcon/godofeye.git
+[submodule "getfullapi"]
+	path = getfullapi
+	url = https://github.com/letiennhat/getfullapi.git

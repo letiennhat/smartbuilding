@@ -1,0 +1,435 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>GREETING BE</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <meta http-equiv="refresh" content="1"> -->
+  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}"> -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script>
+setInterval(function(){
+   $('#myframe1').load("../Blue_eyes/hide_on_push/name_id.txt");
+}, 1000) /* time in milliseconds (ie 2 seconds)*/
+
+setInterval(function(){
+   $('#myframe2').load("../Blue_eyes/hide_on_push/donvi.txt");
+}, 1000) /* time in milliseconds (ie 2 seconds)*/
+setInterval(function(){
+  // var a=;
+  $('#myframe3').html('<img src="static/robot/'+String(Math.floor((Math.random() * 10) + 1))+'.gif" width =  "60%"></img>');
+}, 1000)
+var i = 0;
+setInterval(function(){
+  if (i==2){
+    i=0;
+  }
+  
+
+  // var a=;
+  $('#myframe6').html('<img src="static/robot/welcome_'+String(i)+'.jpg"></img>');
+  i=i+1;
+
+}, 1000)
+var j=0;
+setInterval(function(){
+  if (j==2){
+    j=0;
+  }
+  
+
+  // var a=;
+  $('#myframe7').html('<img src="static/robot/kinhchao_'+String(j)+'.jpg"></img>');
+  j=j+1;
+
+}, 1000)
+
+setInterval(function(){
+  var now = new Date();
+  var hour = now.getHours();
+  if (hour>=0 && hour<12){
+    a="morning";
+
+  }
+  else if(hour>=12 && hour<17){
+    a="afternoon";
+  }
+  else{
+    a="evening";
+  }
+  $('#myframe4').html('<img src="static/when/'+a+'.gif" width =  "30%"></img>');
+}, 60000)
+
+</script>
+<style type="text/css">
+@font-face{
+    font-family: "Myriad-Pro";  
+    src: url(http://www.anaveer.in/honda/font/MYRIADPRO-REGULAR.OTF) format("truetype");
+}
+.welcome_{ font-family:Myriad-Pro; }
+</style>
+
+  <link rel="stylesheet" href="ui_1.css">
+  <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script-->
+</head>
+<body background="static/robot/background_main.jpg" style="background-repeat: no-repeat;background-size: 100% 100% ;">
+  
+
+
+
+
+
+
+
+
+<!--<div class="container-fluid">
+   <div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+  <div class="row">
+    <div class = "col-sm-12" align="center">
+      <img src = "static/logo_dhdn.jpg" width="4%">
+      <img src="static/logo_bkdn.jpg" width="3.99%">
+  </div>
+  <div class="row">
+    <div class="col-sm-12"><p></p></div>
+  </div>
+  <div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+  <div class="row">
+    <div class = "col-sm-12" align="center">
+
+
+    <!-- <div class="col-sm-4" align ="center">
+      <div class="col-sm-2" align ="center"></div><div class="col-sm-3" align ="center"></div--><canvas id="canvas" width="350" height="350"
+style="background-color:#ffffff"> 
+<script>
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var radius = canvas.height / 2;
+ctx.translate(radius, radius);
+radius = radius * 0.90
+setInterval(drawClock, 1000);
+
+function drawClock() {
+  drawFace(ctx, radius);
+  drawNumbers(ctx, radius);
+  drawTime(ctx, radius);
+}
+
+function drawFace(ctx, radius) {
+  var grad;
+  ctx.beginPath();
+  ctx.arc(0, 0, radius, 0, 2*Math.PI);
+  ctx.fillStyle = 'white';
+  ctx.fill();
+  grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
+  grad.addColorStop(0, '#333');
+  grad.addColorStop(0.5, 'white');
+  grad.addColorStop(1, '#333');
+  ctx.strokeStyle = grad;
+  ctx.lineWidth = radius*0.1;
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+  ctx.fillStyle = '#333';
+  ctx.fill();
+}
+
+function drawNumbers(ctx, radius) {
+  var ang;
+  var num;
+  ctx.font = radius*0.15 + "px arial";
+  ctx.textBaseline="middle";
+  ctx.textAlign="center";
+  for(num = 1; num < 13; num++){
+    ang = num * Math.PI / 6;
+    ctx.rotate(ang);
+    ctx.translate(0, -radius*0.85);
+    ctx.rotate(-ang);
+    ctx.fillText(num.toString(), 0, 0);
+    ctx.rotate(ang);
+    ctx.translate(0, radius*0.85);
+    ctx.rotate(-ang);
+  }
+}
+
+function drawTime(ctx, radius){
+    var now = new Date();
+    var hour = now.getHours();
+    var minute = now.getMinutes();
+    var second = now.getSeconds();
+    //hour
+    hour=hour%12;
+    hour=(hour*Math.PI/6)+
+    (minute*Math.PI/(6*60))+
+    (second*Math.PI/(360*60));
+    drawHand(ctx, hour, radius*0.5, radius*0.07);
+    //minute
+    minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+    drawHand(ctx, minute, radius*0.8, radius*0.07);
+    // second
+    second=(second*Math.PI/30);
+    drawHand(ctx, second, radius*0.9, radius*0.02);
+}
+
+function drawHand(ctx, pos, length, width) {
+    ctx.beginPath();
+    ctx.lineWidth = width;
+    ctx.lineCap = "round";
+    ctx.moveTo(0,0);
+    ctx.rotate(pos);
+    ctx.lineTo(0, -length);
+    ctx.stroke();
+    ctx.rotate(-pos);
+}
+</script>
+</canvas>
+<p align = "center">
+<iframe src="http://free.timeanddate.com/clock/i73fqmuy/n95/fs42/ftb/tt1/tw0/tm1" frameborder="0" width="259" height="50"></iframe>
+        </p> <!-- <iframe src="http://free.timeanddate.com/clock/i72pwvne/n95/szw210/szh210/hoc222/hbw6/cf100/hgr0/hcw2/hcd88/fan2/fas20/fdi70/mqc000/mqs3/mql13/mqw4/mqd94/mhc000/mhs3/mhl13/mhw4/mhd94/mmc000/mml5/mmw1/mmd94/hwm2/hhs2/hhb18/hms2/hml80/hmb18/hmr7/hscf09/hss1/hsl90/hsr5" frameborder="0" width="210" height="210"></iframe> -->
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+<div class = "row">
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p id="myframe6" align = "center"></p></div> 
+
+</div>
+      <p><div class="col-sm-2"></div><div class="col-sm-3"></div>
+        
+ 
+
+      <!--marquee--><!-- scrollamount="10" scrolldelay="300" style="height: 100%; width: 100%;"-->
+        <span style="color: red; font-size: 130px;" >
+</span>
+      <!-- </marquee> -->
+    </div>
+  </div>
+  </br>
+  <!-- <div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div> -->
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+  <div class="row">
+    <div class="col-sm-3" >
+      <p> </p>
+        </br>
+      <p>                 </p>
+      <p>                  </p>
+<!--       {%if "Ban Giám hiệu" in donvi or id1 == "10272" %}
+ -->      
+<!--         <img src = "static/scv/BANGIAMHIEU/{{id1}}/classe0.jpg" width = "95%" height = "70%"></image>
+ -->      
+      
+<!--       {%else%}
+ -->
+        <!-- <image src ="static/bohoa.jpg" width = "95%" height ="70%"></image> -->
+<!--       {%endif%}
+ -->
+    </div>
+
+    <div class="col-sm-6" >
+      <font size = 10px >
+        <!-- <p align = "center" class = "kinhchao"> KÍNH CHÀO </p> -->
+        <p id ="myframe7" align="center"></p>
+      </font>
+    <div class = "row">
+      <div class="col-sm-12" align="center"> <p></p><p></p></div>
+    </div>
+    <div class = "row">
+      <div class="col-sm-12" align="center"> <p></p><p></p></div>
+    </div>
+    <div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+        <!-- <p align="center" class = "certificate" > {{chucdanh.upper()}} </p> -->
+        <p align="center" class = "certificate" id="myframe1">
+          
+         
+
+         
+          </p>
+  </div>
+  <div class="col-sm-3" align="right"><img src="static/robot/sayhi_1.gif" width="30%"></div>
+          <div class = "row">
+  <div class="col-sm-12" align="right"> <p></p><p></p></div>
+</div>
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+    <div class = "row">
+      <div class="col-sm-12" align="center"> <p></p><p></p></div>
+    </div>
+    <div class = "row">
+      <div class="col-sm-12" align="center"> <p></p><p></p></div>
+    </div>
+    <div class="col-sm-6" align="center"></div>
+          
+        <p align ="center" class = "certificate" id="myframe2" > </p>
+
+         
+      </font>
+      
+      <!-- <image src="static/happynewyear.jpg" width = "30%"></image> -->
+      <!-- src ="static/robot/{{random_robot}}.gif" -->  
+      
+    </div>
+    <!-- <div class="col-sm-3" align ="c"><font size=6px ><p align = "center" > Sự Kiện </p></font></div>
+      </br><p>        </p> -->
+      
+<!--           <iframe id="myframe" src="name_id.txt"></iframe>
+ -->
+      
+  </div>
+
+  <div class = "row">
+        <div class="col-sm-1" align="left"></div> 
+        <div class="col-sm-2" align="left">
+
+           <!-- <img src="static/robot/sayhi_1.gif" width="100%" > -->
+        </div>
+        <div class="col-sm-6" ><!-- <p align=" center"> -->
+        <marquee behavior = "alternate" scrollamount="100" scrolldelay="1000" style="height: 100%; width: 100%;"> 
+          <!-- <button> -->
+            <div class ="row">
+              <div class="col-sm-6"><p></p> </div>
+            </div>
+            <div class ="row">
+              <div class="col-sm-6"><p></p> </div>
+            </div>
+            <div class ="row">
+              <div class="col-sm-6"><p></p> </div>
+            </div>
+            <div class ="row">
+              <div class="col-sm-6"><p></p> </div>
+            </div>
+            <div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+<!-- <div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div> -->
+            <img src="static/robot/happynewyear.jpg">
+          <!-- </button> -->
+          </marquee> </p>
+ 
+        </div>
+        <div class="col-sm-2">
+
+           
+        </div>
+        <div class="col-sm-1" align="left"></div>
+  </div>
+      
+</div>
+ 
+
+<!-- <marquee behavior="alternate"> Bản quyền thuộc trường Đại Học Bách Khoa </marquee> -->
+<style>
+  .wd-footer{
+    font-size: 20px;
+    font-weight: bold;
+    border-color:#913a3b;
+  }
+</style>
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+<div class = "row">
+  <div class="col-sm-12" align="center"> <p></p><p></p></div>
+</div>
+<div class = "row">
+  <div class="col-sm-12" align="left"> <p></p><p></p></div>
+  
+</div>
+ -->
+<p class="wd-footer" align="center">© Bản quyền Trường Đại học Bách khoa - Đại học Đà Nẵng </p>
+
+</body>
+</html>

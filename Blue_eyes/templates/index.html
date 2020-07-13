@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Le Tien Nhat
+	</title>
+	<meta name="author" content="Le Tien Nhat">
+	<meta name="keywords" content="AI,Le TIen Nhat">
+		
+		
+		<meta http-equiv="refresh" content="1">
+	<meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="icon" type="image/x-icon" href="static/Logo_dhbkdn.jpg">
+
+	<link rel="stylesheet" type="text/css" href="login.css">
+	<header></header>
+	<style>
+		html {
+    margin: 0;
+    padding: 0;
+}
+ul{
+    font-size: 20pt;
+    color: rgb(255,0,0);
+    text-align: right;
+}
+
+
+.img-circle {
+    border: 3px solid white;
+    border-radius: 50%;
+}
+.section {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+#header {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqutVObmXQdkR60zTmpJ9Od3c1tWRr8bSTX-BPSJkUkPA7ZCE3");
+    background-size: cover;
+}
+#header img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+}
+#header p {
+    font-size: 25pt;
+    color: #3b464c;
+    padding-top: 5px;
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+}
+.quote {
+    font-size: 12pt;
+    text-align: right;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 2px solid #cecece;
+    border-collapse: collapse;
+    text-align: center;
+    table-layout: fixed;
+}
+.selected {
+    background-color: #f36f48;
+    font-weight: bold;
+    color: white;
+}
+li {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+progress {
+    width: 70%;
+    height: 20px;
+    color: #3fb6b2;
+    background: #efefef;
+}
+progress::-webkit-progress-bar {
+    background: #efefef;
+}
+progress::-webkit-progress-value {
+    background: #3fb6b2;
+} 
+progress::-moz-progress-bar {
+    color: #3fb6b2;
+    background: #efefef;
+}
+iframe, audio {
+    display: block;
+    margin: 0 auto;
+    border: 3px solid #3fb6b2;
+}
+hr {
+    border: 0;
+    height: 1px;
+    background: #f36f48;
+}
+form {
+    
+    text-align: center;
+    margin-top: 0;
+}
+.submit {
+    background-color: #3fb6b2;
+    padding: 12px 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    margin: 0;
+    font-weight: bold;
+}
+.submit:hover {
+    background-color: #43a09d;
+}
+textarea {
+    height: 100px;
+}
+input, textarea {
+    margin-bottom: 10px;
+    font-size: 11pt;
+    padding: 15px 10px 10px;
+    border: 1px solid #cecece;
+    background-color: #efefef;
+    color: #787575;
+    border-radius: 5px;
+    width: 70%;
+    outline: none;
+}
+.face {
+    transform: scale(0.4);
+    margin: 0 auto;
+    display: block;
+    margin-top: -35px;
+    margin-bottom: -25px;
+}
+#contacts img {
+    height: 50px;
+    width: 50px;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+#contacts a {
+    text-decoration: none;
+}
+#contacts img:hover {
+    opacity: 0.8;
+}
+#contacts {
+    text-align: center;
+}
+.copyright {
+    font-size: 8pt;
+    text-align: right;
+    padding-bottom: 10px;
+    color: grey;
+}
+@-webkit-keyframes my {
+     0% { color: #F8CD0A; } 
+     50% { color: #fff;  } 
+     100% { color: #F8CD0A;  } 
+ }
+ @-moz-keyframes my { 
+     0% { color: #F8CD0A;  } 
+     50% { color: #fff;  }
+     100% { color: #F8CD0A;  } 
+ }
+ @-o-keyframes my { 
+     0% { color: #F8CD0A; } 
+     50% { color: #fff; } 
+     100% { color: #F8CD0A;  } 
+ }
+ @keyframes my { 
+     0% { color: #F8CD0A;  } 
+     50% { color: #fff;  }
+     100% { color: #F8CD0A;  } 
+ } 
+ .test {
+         background:#3d3d3d;
+         font-size:100px;
+         font-weight:bold;
+     -webkit-animation: my 700ms infinite;
+     -moz-animation: my 700ms infinite; 
+     -o-animation: my 700ms infinite; 
+     animation: my 700ms infinite;
+}
+	</style>
+    <button style="font-size : 20px; width: 100%; height: 40px;">
+	<script>
+		var currentDate = new Date(),
+      day = currentDate.getDate(),
+      month = currentDate.getMonth() + 1,
+      year = currentDate.getFullYear(),
+  	
+  		hours = currentDate.getHours(),
+     	minutes = currentDate.getMinutes();
+
+	if (minutes < 10) {
+	 minutes = "0" + minutes;
+ 	 }
+
+	var suffix = "AM";
+	if (hours >= 12) {
+    suffix = "PM";
+    hours = hours - 12;
+	}
+	if (hours == 0) {
+	 hours = 12;
+	}
+
+	
+</script>
+
+	</button>
+</head>
+
+<body background="static/logo.jpg" style="background-size :100%;background-repeat:no-repeat;background-position:center;background-attachment: fixed">
+
+	<div align="center"<p width="100%" > <font size="10" color="blue">    Trường Đại Học Bách Khoa - Đại Học Đà Nẵng</br>Da Nang University of Science and Technology - Da Nang, Vietnam</font></p></div>
+    <p width="100%" >  </p>
+    <div align = "center">
+        <button style="font-size : 20px; width: 40%; height: 100px;">
+        <p>
+        <font size="10" color="blue"><script> document.write(new Date().toLocaleDateString()); </script></font>
+        
+        </p>
+    </button>
+        <!--h1>Dự báo thời tiết - Thành phố Đà Nẵng</h1-->
+        <!--img src="http://banners.wunderground.com/banner/gizmotimetemp_both/
+language/www/global/stations/48855.gif"
+alt="Du bao thoi tiet - Thanh pho Da Nang" title="Dự báo thời tiết - Thành phố Đà Nẵng" height=100 width=300-->
+        <form align = "center">
+        <!--button style="font-size : 40px; width: 100%; height: 300px;"-->
+
+        {% if signal == "1" %}
+        <p > 
+            <h1><font size="10" color="blue"> Kính chào </font> </h1>
+        {%else%}
+
+            {%if ten_signal.upper() == "UNKNOW" %}
+
+                <p class="test"> Kính chào Thầy cô</p>
+                <!--img width="40%" height = "30%" src="static/tenor1.gif"-->
+            {% endif %}
+            {%if ten_signal.upper() == "EVERYONE" %}
+
+                <p class="test"> Kính chào các thầy cô</p>
+            {% endif %}
+            {% if ten_signal.upper() !="UNKNOW" %}
+                <p  class="test"> Kính chào {{ten_signal.upper()}}</p>
+            
+            
+            <!--img width="40%" height = "30%" src="static/tenor.gif"-->
+            <!--img src = "static/{{ten_signal}}/classe0.jpg" width = "40%" height = "30%" alt ="User Image"-->
+
+            {% endif %}
+        </p>
+            </br></br>
+            <img width="40%" height = "30%" src="static/tenor1.gif">
+        {% endif %}
+        
+        </form>
+    <div align="center">
+        <form align = "center">
+        {%if camxuc=="1"%} {#vui#}
+        
+
+            <button style="font-size : 40px; width: 40%; height: 200px;">
+                <img algint = "left" width="10%" height = "30%" src ="static/icon.jpg">
+            <span style="color:red"><font size="10" color="blue">Trông bạn hôm nay </br></br> đẹp nè </font></span></button>
+        {%else%}
+
+            <button style="font-size : 40px; width: 40%; height: 200px;">
+                <img algint = "left" width="10%" height = "30%" src ="static/icon1.jpg">
+                <span style="color:red"> Trông bạn hôm nay </br></br> Hãy cười lên vì cuộc sống nay này rất tươi đẹp hehe </span></button>
+        {%endif%}
+        </form>
+    </div>
+
+    <!-- 25/11/2019
+	<p id="date_time_button"></p>
+	<div style="float: center;font-size: 100%"><h1 align="center"><span style=" border: 2px dashed #20bcd5;
+    padding: 4px;">15PFIEV2<span></h1></div>
+	
+	<p align="center"><img src ="https://upload.wikimedia.org/wikipedia/commons/8/89/Logo_dhbkdn.jpg" width="300" length = "300"/></p>
+	<div>
+		<table align="right" border="1" width="500" length="500">
+				<div style="float: right;"><strong><span style=" border: 2px dashed #20bcd5;
+    padding: 4px;"> Danh sach SV vắng mặt </span></strong></div>
+				<br>
+				<br>
+				<tr>
+					<th>STT</th>
+					<td>Họ và Tên</td>
+				</tr>
+				{% for value in lit_vang %}
+            	<tr>
+               		<th> {{lit_vang.index(value)+1}} </th>
+               		<td> {{ value }} </td>
+            	</tr>
+         		{% endfor %}
+	         	
+		</table>
+	</div>
+	<div align="left" class="section">
+			<div align="left"><b style="float:left;"><span style=" border: 2px dashed #20bcd5;
+    padding: 4px;"> Danh sách SV có mặt</span></b></div>
+			<br>
+			<br>
+		<table align="left" border="1" width="500" length="500">
+				<tr>
+					<th>STT</th>
+					<td>Họ và Tên</td>
+				</tr>
+			
+				{% for value in lit_comat %}
+            	<tr>
+               		<th> {{lit_comat.index(value)+1}} </th>
+               		<td> {{ value }} </td>
+            	</tr>
+         		{% endfor %}
+         	
+		</table>	
+	</div>
+	{%for i in range(30)%}
+	<br>
+	{% endfor %}
+	<div align="center" class="section">
+			<div align="center"><b style="float:center"><span style=" border: 2px dashed #20bcd5;
+    padding: 4px;"> Danh sách SV 15PFIEV2</span></b></div>
+    		<br>
+    		<br>
+			<table align="center" border="1" width="500" length="500">
+				<tr>
+					<th>STT</th>
+					<td>Họ và Tên</td>
+
+					<td>Số buổi vắng</td>
+					<td>Trạng thái SV</td>
+				</tr>
+				{% for value in lit_sv %}
+            	<tr>
+               		<th> {{lit_sv.index(value)+1 }} </th>
+               		<td> {{ value }} </td>
+               		<td> {{ lits[lit_sv.index(value)] }}</td>
+               		<td> {{ list_camxuc[lit_sv.index(value)] }}	</td>
+            	</tr>
+         		{% endfor %}
+			</table>end 25/11/2019-->
+		
+			
+	</div>
+	<!--div class="section"-->
+	
+
+</body>
+</html>

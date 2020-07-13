@@ -1,0 +1,1 @@
+{"id": "unknown", "emotion": "happy", "time": 1594655892.7491958, "evident_path": "sbuilding/unknown/unknown_13-07_22-58-12.jpg", "postprocessing": "/home/blueeyes1/smartbuilding/smartbuilding/smartbuilding/test_options/static/sbuilding/unknown/13-07_22-58-12"}

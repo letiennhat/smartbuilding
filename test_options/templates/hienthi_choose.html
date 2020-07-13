@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<script src="static/boostrap.css"></script>
+	<title>Thông tin vào ra tòa nhà</title>
+</head>
+<style>
+	body{
+		background-image: url('static/smartlighting.jpg');
+		background-size: 100%;
+	}
+	#grey{
+		color:grey;
+	}
+	#grey4{
+		color:#dcdcdc;
+		font-size: 20px;
+	}
+	#project{
+		font-size: 30px;
+	}
+	#red{
+		color:#bb3300;
+		font-size: 30px;
+	}
+	#thongtinvaoratoanha{
+		color:#ffcc00;
+		font-size: 90px;
+		font-weight: bolder;
+		opacity:0.7;
+	}
+	p{
+		color: #fff;
+		font-size: 20px;
+		font-weight : border;
+	}
+	/*textarea:focus, input:focus {
+    color: #fff;
+	}*/
+	input {
+
+		text-align:  center;
+	/*-webkit-appearance: none;*/
+		border: none;
+		width: 500px;
+		height: 100px;
+		opacity: 0.6;
+		font-size: 40px;
+
+	}
+	body{
+		font-family: Arial, Helvetica, sans-serif	;
+		color:#fff;
+		font-size: 20px;
+		font-weight : border;
+	}
+
+/*input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}*/
+/*input[type="color"]::-webkit-color-swatch {
+	border: none;
+}*/
+</style>
+<body>
+<form action="/hienthi" method="POST">
+	<div ></div>
+	
+
+	 <div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-6" align="left"> <strong id ="grey">@Copyright</strong>
+				</br>Trường Đại học Bách Khoa
+				</br>Đại học Đà Nẵng</div>
+			
+		</div>
+		<div class="row" align="center">
+			<p id="thongtinvaoratoanha"> Thông tin vào ra tòa nhà </p>
+			<input type="submit" align="center" name="hienthi" value="Theo thời gian">
+			<br/>
+			<br/><input type="submit" align="center" name="hienthi" value="Theo Đơn vị / Cá nhân">
+			<br/>
+			<br/><input type="submit" align="center" name="hienthi" value="Thông tin cá nhân">
+		</div>
+		<div class="row" align="left"><strong id="grey4"> MANAGEMENT & SECURITY <br/><a id="red"> Smart</a><a id="project">Univ Project</a></strong></div>
+		<!-- <div class="row" align="center"><input type="submit" align="center" value="Theo thời gian"></div> -->
+	</div> 
+</form>
+<!-- <div class="col-sm-6" align="center"> <input type="submit" align="center"></div> -->
+</body>
+</html>

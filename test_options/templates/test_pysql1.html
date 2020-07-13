@@ -1,0 +1,78 @@
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+
+<!-- <button onClick="window.location.reload();">Refresh Page</button> -->
+<!-- <meta > -->
+<style type="text/css">
+	th{
+		color: green;
+	}
+</style>
+<meta charset="utf-8">
+<!-- <meta http-equiv="refresh" content="2"> -->
+<!-- <div id = "mytable"> -->
+<h1 style="color: red;text-align: center;border: 2px dashed #20bcd5;
+    padding: 4px;">Thông tin vào ra của Ông/Bà {{name}} ở tòa nhà S</h1>
+<form action="/hienthi_anh" method="POST">
+<table border="3" id = "mytable" align="center">
+{%if not xxx%}
+	<tr>
+		<th> ID </th>
+		<!-- <th> </th> -->
+		<th>Họ Và Tên</th>
+		<th>Đơn Vị</th>
+		<th>Ngày Sinh</th>
+		<th> Giới Tính </th>
+		<th> Chức Vụ</th>
+		<th> Trình độ</th>
+		<th>Học hàm </th>
+		<th> Ngày </th>
+		<th> Tháng </th>
+		<th> Năm </th>
+		<th> Giờ </th>
+		<th> Phút </th>
+		<th>Ảnh record</th>
+		
+		<!-- <th> </th> -->
+	</tr>
+	<!-- <th> Hình ảnh record </th> -->
+{%else%}
+	<tr>
+		<th> ID </th>
+		<!-- <th> </th> -->
+		<th>Họ Và Tên</th>
+		<th>Đơn Vị</th>
+		<th>Ngày Sinh</th>
+		<th> Giới Tính </th>
+		<th> Chức Vụ</th>
+		<th> Trình độ</th>
+		<th>Học hàm </th>
+		<th> Ngày </th>
+		<th> Tháng </th>
+		<th> Năm </th>
+		<th> Giờ </th>
+		<th>Ảnh record</th>
+		
+		<!-- <th> </th> -->
+	</tr>
+{%endif%}	
+	{% block content %}
+	{% for i in data%}
+		<tr>
+		{%for k in i%}
+			
+				{% if "\n" in k or "ilding" in k %}
+					<td><button type="submit" name="clicktoview" value="{{data.index(i)}}"> <--click to view--></td>
+				{% else %}
+					<td>{{k}}</td>
+				{% endif %}
+			
+		{%endfor%}
+		</tr>
+	{%endfor%}
+	{% endblock content %}
+
+
+		
+</table>
+</form>
+<!-- </div> -->

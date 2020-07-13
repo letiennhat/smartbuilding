@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nhap csdl</title>
+</head>
+<style>
+	button{
+		font-size:25pt;
+		color: red;
+		text-shadow: grey;
+		border: bold;
+	}
+</style>
+<body align = "left">
+	<form action="/hocanh" method="POST" >
+		<a style="color : red ; font-size: 20px">
+			Nhập vào ID bỏ qua nếu bạn muốn id random hoặc chưa có id:
+		</a>
+		<br/>
+
+		&emsp;<p><textarea name="id""></textarea></p>
+		Nhập vào họ và tên:
+		<br/>
+
+		&emsp;<p><textarea name="hovaten"></textarea></p>
+		Nhap vao ten:
+		&emsp;<p><textarea name="ten"></textarea></p>
+		Nhap vao ngay sinh(dd/mon/year):
+		&emsp;<p><textarea name="ngaysinh"></textarea></p>
+		Gioi tinh:
+		&emsp;<p><textarea name="gioitinh"></textarea></p>
+		Don vi:
+		&emsp;<p><textarea name="donvi"></textarea></p>
+		Bo mon:
+		&emsp;<p><textarea name="bomon"></textarea></p>
+		Chuc vu:
+		&emsp;<p><textarea name="chucvu"></textarea></p>
+		Trinh do chuyen mon:
+		&emsp;<p><textarea name="trinhdo"></textarea></p>
+		Hoc ham:
+		&emsp;<p><textarea name="hocham"></textarea></p>
+		<div style="align:center"><button type="submit" name="luu_data" value="luu_data"> Save and login</button></div>
+	</form>
+</body>
+</html>

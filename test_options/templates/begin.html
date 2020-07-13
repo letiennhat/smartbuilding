@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <link rel="stylesheet" href="static/boostrap.css">
+	<title>Smart building</title>
+	<script src="jquerymav1.js"></script>
+	<script src="jquerymav2.js"></script>
+	<script src="boostrapc1.js"></script>
+</head>
+<style>
+	body{
+		background-image: url('static/smartlighting.jpg');
+		background-size: 100%;
+	}
+	#grey{
+		color:grey;
+	}
+	#grey4{
+		color:#DDD;
+		font-size: 20px;
+	}
+	#project{
+		font-size: 30px;
+	}
+	#red{
+		color:#bb3300;
+		font-size: 50px;
+		font-weight: bolder;
+	}
+	#red1{
+		color:#bb3300;
+		font-size: 30px;
+		font-weight: bolder;
+	}
+	#building{
+		color: #ffffff;
+		font-size: 50px;
+		font-weight: bolder;
+	}
+	#thongtinquanly{
+		color:#fff;
+		font-size: 50px;
+		font-weight: bolder;
+
+	}
+	p{
+		color: #fff;
+		font-size: 20px;
+		font-weight : border;
+	}
+	/*textarea:focus, input:focus {
+    color: #fff;
+	}*/
+	input {
+
+		text-align:  center;
+	/*-webkit-appearance: none;*/
+		border: none;
+		width: 600px;
+		height: 100px;
+		opacity: 0.6;
+		font-size: 40px;
+
+	}
+	body{
+		font-family: Arial, Helvetica, sans-serif	;
+		color:#fff;
+		font-size: 20px;
+		font-weight : border;
+	}
+
+/*input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}*/
+/*input[type="color"]::-webkit-color-swatch {
+	border: none;
+}*/
+</style>
+<body>
+	
+	
+	<form action="/trangchu" method="POST">
+		<div class="container-fluid"> 
+				<div class="row">
+					<div class="col-sm-5" align="left"> 
+					
+							<a id="thongtinquanly"><br>Thông tin Quản lý</a>
+
+							</br><a id="red">Smart</a><a id="building">Building</a>
+						
+					</div>
+
+					<div class="col-sm-6" align="right" ></br></br></br><input type="submit" align="center" name ="trangchu" value="Thông tin ra vào tòa nhà">
+					</br></br><input type="submit" align="center" name ="trangchu" value="Dữ liệu thống kê">
+				</div>
+
+				</div>
+				
+			
+				<div class="row">
+					<div class="col-sm-5" align="left"> 
+						<strong id ="grey">@Copyright</strong>
+						</br>Trường Đại học Bách Khoa
+						</br>Đại học Đà Nẵng</div>
+					<div class="col-sm-6" align="right"><br><input type="submit" name ="trangchu" align="center" value="Học thông tin cá nhân mới"></div>
+				</div>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				
+				
+
+				<div class="row">
+					<div class="col-sm-5" align="left"> 
+						<strong id="grey4"> MANAGEMENT & SECURITY <br/><a id="red1"> Smart</a><a id="project">Univ Project</a></strong>
+					</div>
+					
+					<div class="col-sm-6" align="right">
+						<input type="submit" align="center" value="Đăng xuất">
+					</div>
+					</div>
+
+		</div>
+	</form>
+		
+	<!-- </div> -->
+	<!--	</div>
+		<div class="row" align="center">
+			<p id="thongtinvaoratoanha"> Thông tin vào ra tòa nhà </p>
+			<input type="submit" align="center" value="Theo thời gian">
+			<br/>
+			<br/><input type="submit" align="center" value="Theo Đơn vị / Cá nhân">
+			<br/>
+			<br/><input type="submit" align="center" value="Thông tin cá nhân">
+		</div>
+		<div class="row" align="left"><strong id="grey4"> MANAGEMENT & SECURITY <br/><a id="red"> Smart</a><a id="project">Univ Project</a></strong></div>
+		 <div class="row" align="center"><input type="submit" align="center" value="Theo thời gian"></div>
+	</div>--> 
+
+<!-- <div class="col-sm-6" align="center"> <input type="submit" align="center"></div> -->
+</body>
+</html>

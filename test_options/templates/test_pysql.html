@@ -1,0 +1,63 @@
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+
+<!-- <button onClick="window.location.reload();">Refresh Page</button> -->
+<!-- <meta > -->
+<!-- realtime --> 
+<style type="text/css">
+	th{
+		color: green;
+	}
+
+</style>
+<meta charset="utf-8">
+<meta http-equiv="refresh" content="2">
+<!-- <div id = "mytable"> -->
+
+<h1 style="color: red;text-align: center;border: 2px dashed #20bcd5;
+    padding: 4px;">Thông tin vào ra thực tế ở tòa nhà S</h1>
+<form action="/exported" method="POST" align="center">
+	<p> <input type="submit"  value = "Export-to-excel" name ="export_to_excel" style="color : red;font-size : 26pt; width: 30%; height: 100px;" ></p>
+</form>
+<form action="/hienthi_anh" method ="POST">
+<table border="3" id = "mytable" align="center">
+	<tr>
+		<th> ID </th>
+		<th> Họ và Tên </th>
+		<th> Đơn vị </th>
+		<th> Ngày </th>
+		<th> Tháng </th>
+		<th> Năm </th>
+		<th> Giờ </th>
+		<th> Phút </th>
+		<th> Ảnh </th>
+	</tr>
+	<!-- <th> Hình ảnh record </th> -->
+	{% block content %}
+	{% for i in data%}
+		<tr>
+		{%for k in i%}
+			
+				{% if "\n" in k or "ilding" in k %}
+					<td><button type="submit" name="clicktoview" value="-{{data.index(i)}}"> <--click to view--></td>
+				{% else %}
+					<td>{{k}}</td>
+				{% endif %}
+			
+		{%endfor%}
+		</tr>
+	{%endfor%}
+	{% endblock content %}
+	<!-- {% for i in data%}
+		<tr>
+		{%for k in i%}
+			<td>
+				{{k}}
+			</td>
+		{%endfor%}
+		</tr>
+	{%endfor%} -->
+</table>
+</form>
+	
+
+<!-- </div> -->

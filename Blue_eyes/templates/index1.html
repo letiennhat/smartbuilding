@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+</head>
+<body>
+	<div align = "center"> 
+        <!--
+        <{% for value in lit_comat %}
+                <tr>
+                    <th> {{lit_comat.index(value)}} </th>
+                    <td> {{ value }} </td>
+                </tr>
+        {% endfor %}>
+        -->
+        {% if signal == "1" %}
+            <h1> Hello everyone </h1>
+        {%else%}
+            {%if ten_signal == "UNKNOW" %}
+
+                <h1> Hello Teacher</h1>
+            {% endif %}
+
+            {% if ten_signal !="UNKNOW" %}
+                <h1> Hello {{ten_signal.upper()}}</h1>
+
+                <img src = "static/images/shovon.jpg" alt ="User Image">
+
+            {% endif %}
+        {% endif %}
+        
+        <!--
+        <h1> Xin Chào </h1>
+        <h2>{{lit_comat[-1].upper()}}</h2>
+        {%if lit_comat[-1] == "nhat" %}
+            
+            <img src = "https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/69951892_2410826935911751_1911780412640722944_n.jpg?_nc_cat=107&_nc_ohc=w7Wzx9c3_9sAQnbBHZQqfUO8bA6kBFjoiwC1U8C3p3yK6MWuWcI6zZk3A&_nc_ht=scontent-lhr3-1.xx&oh=88e6d7c158fb9e46c4002c8397dd1edc&oe=5E3FFE33" width ="200" height ="300">
+        {%endif%}
+        -->
+
+    </div>
+    <img src = "static/images/shovon.jpg" alt ="User Image">
+    <div align="center">
+        <h1>    Trông Cậu hôm nay </h1>
+        {%if list_camxuc[1]=="neutral"%}
+        <h2><span style="color:red"> Dep trai qua </span></h2>
+        {%else%}
+        <h3> Vui tinh qua </h3>
+        {%endif%}
+    </div>
+
+	<img src = "static/people_photo/shovon.jpg" alt ="User Image">
+
+</body>
+</html>

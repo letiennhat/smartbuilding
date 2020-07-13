@@ -1,0 +1,57 @@
+<script src="static/chartv801.js"></script>
+<script src="static/chartv801pie.js"></script>
+<style type="text/css">
+  html, body, #container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+h1{
+  font-size: 25px; 
+  color:red;
+}
+</style>
+
+<script type="text/javascript">
+
+anychart.onDocumentReady(function() {
+  // set the data
+  var data = [
+   
+  {%for (i,j) in data1%}
+        {%if j == max%}
+          {x : "{{i}}",value :{{j}}, exploded:true },
+        {%elif i==""%}
+          {x : "nothing",value:{{j}}},
+        {%else%}
+          {x : "{{i}}" ,value:{{j}}},
+        {%endif%}
+        
+  {%endfor%}
+];
+  // create the chart
+  var chart = anychart.pie();
+
+  // set the chart title
+  chart.title("Các Đơn vị có tần suất xuất hiện nhiều nhất ở tòa nhà S");
+
+  // add the data
+  chart.data(data);
+  
+  // sort elements
+  chart.sort("desc");  
+  
+  // set legend position
+  chart.legend().position("right");
+  // set items layout
+  chart.legend().itemsLayout("vertical");  
+
+  // display the chart in the container
+  chart.container('container');
+  chart.draw();
+      
+});
+</script>
+<h1 align="left" >Quản Lý Tòa Nhà S</h1>
+<div id="container" ></div>

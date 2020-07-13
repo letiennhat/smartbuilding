@@ -1,0 +1,46 @@
+
+      
+
+      <form action="/uploadvideo" method="POST" enctype="multipart/form-data">
+      <style>
+	input{
+		/*block-size: 28px;*/
+		color: red;
+		font-size: 39pt;
+		size: "10";
+		width: 350px; height: 300px;
+    border-radius:10% 30% 50% 20%;
+	}
+  button{
+    border-radius:10% 30% 50% 20%;
+		/*block-size: 28px;*/
+		color: red;
+		font-size: 39pt;
+		size: "10";
+		width: 200px; height: 300px;
+	}
+  label{
+    font-size:18pt
+  }
+</style>
+      <h1>Upload an Video</h1>
+      <hr>
+        <h1>{{va}}</h1>
+        <div class="form-group">
+          <label style="font-size:18pt">Select video .mp4 or .avi Dung luong <= 500mb</label>
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" name="image" id="image">
+            <label class="custom-file-label" for="image">Select video...</label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Upload</button>
+        &emsp;&emsp;&emsp;&emsp;&emsp;
+        <!--<input type="submit" name="reset_system" value="Reset-System">-->
+        
+        &emsp;&emsp;&emsp;&emsp;&emsp;
+        
+        <{{ba}}>
+        </form>
+        
+      
