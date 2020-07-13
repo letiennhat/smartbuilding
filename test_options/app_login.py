@@ -235,7 +235,7 @@ def loop_realtime():
                 # data = cursor.fetchall()
                 # cursor.close()
                 # cursor = database.cursor()
-                cursor_looprealtime.execute("select id,hovaten,donvi,ngay,thang,nam,gio,phut,url from realtime_0 where ngay = {} and thang={} and nam = {}".format(str(time.localtime(time.time()).tm_mday),str(time.localtime(time.time()).tm_mon),str(time.localtime(time.time()).tm_year)))
+                cursor_looprealtime.execute("select id,hovaten,donvi,ngay,thang,nam,gio,phut,emotion,url from realtime_0 where ngay = {} and thang={} and nam = {}".format(str(time.localtime(time.time()).tm_mday),str(time.localtime(time.time()).tm_mon),str(time.localtime(time.time()).tm_year)))
                 # cursor.execute("select ngay,gio,hovaten,chucvu from realtime_0 where id=1")
                 # data_id = cursor1.fetchall()
                 data_1 = cursor_looprealtime.fetchall()

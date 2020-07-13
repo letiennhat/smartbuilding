@@ -150,8 +150,8 @@ def loop():
                         #     f.write(f'<center><img src ="/static/status/{str(emotion_text)}.png" width ="10%"/></center>')
                     print("parce val = 0")
                     query_0 = """insert into realtime_0 select %s,%s,%s,%s,%s,%s,hovaten,donvi,ngaysinh,gioitinh,\
-                            chucvu,trinhdo,hocham,%s from manager where maso = %s"""
-                    value_0 = val,day,mon,years,hour,evidence_path,mins,val
+                            chucvu,trinhdo,hocham,%s,%s from manager where maso = %s"""
+                    value_0 = val,day,mon,years,hour,evidence_path,mins,emotion_text,val
                     check_query = value_0
                     if key_check == 0:
                         
@@ -192,9 +192,9 @@ def loop():
                     
                     print("ok")
                     query_ok = """insert into realtime_0 select %s,%s,%s,%s,%s,%s,hovaten,donvi,ngaysinh,gioitinh,\
-                            chucvu,trinhdo,hocham,%s from manager where maso = %s"""
+                            chucvu,trinhdo,hocham,%s,%s from manager where maso = %s"""
                     
-                    value_ok = val,day,mon,years,hour,evidence_path,mins,val
+                    value_ok = val,day,mon,years,hour,evidence_path,mins,emotion_text,val
                     check_query = value_ok
                     if key_check == 0:
                         
