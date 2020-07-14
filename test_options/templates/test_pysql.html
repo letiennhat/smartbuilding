@@ -37,7 +37,7 @@
 	{% for i in data%}
 		<tr>
 		{%for k in i%}
-			
+
 				{% if "\n" in k or "ilding" in k %}
 					<td><button type="submit" name="clicktoview" value="-{{data.index(i)}}"> <--click to view--></td>
 				{% else %}

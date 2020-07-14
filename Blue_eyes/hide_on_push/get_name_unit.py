@@ -88,7 +88,7 @@ def loop():
                 mins = time.localtime(time1).tm_min
                 seconds = time.localtime(time1).tm_sec
                 
-                chec = val,day,mon,years,hour,evidence_path,mins,val
+                chec = val,day,mon,years,hour,evidence_path,mins,emotion_text,val
                 if check_query != chec:
                     
                     key_check = 0

@@ -239,6 +239,9 @@ def loop_realtime():
                 # cursor.execute("select ngay,gio,hovaten,chucvu from realtime_0 where id=1")
                 # data_id = cursor1.fetchall()
                 data_1 = cursor_looprealtime.fetchall()
+                #print(data_1)
+                #print(len(data_1))
+
                 #database.commit()
                 # cursor1.close()
                 cursor_looprealtime.close()
