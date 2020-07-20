@@ -3,9 +3,6 @@ import numpy as np
 import pymysql
 import os
 database = pymysql.connect('localhost','be', 'blueeyes',autocommit=True,db="mysqldb1")
-# cursor = database.cursor()
-#cursor.execute("use mysqldb1")
-# Create a VideoCapture object
 cap = cv2.VideoCapture('rtsp://admin:be123456@10.10.46.224:554/Streaming/Channels/101')
 # cap = cv2.VideoCapture(0)
 

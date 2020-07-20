@@ -1,29 +1,18 @@
   <!DOCTYPE html>
+  <!-- WELCOMING APP -->
 <html lang="en">
 <head>
   <title>GREETING BE</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <meta http-equiv="refresh" content="1"> -->
-  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}"> -->
-   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+
    
    <script type="text/javascript" src="jquery.js"></script>
    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-   <!-- <script data-main="your-Scrpt.js" src="require.js"></script> -->
    
    <script>
-     //begin emotion
-  //    function jst()
-  // {
-  //   var i = 0;
-  //   i = "<?php
-  //     $myfile = fopen("/home/blueeyes1/smartbuilding/smartbuilding/smartbuilding/Blue_eyes/hide_on_push/emotion_values.txt", "r") or die("Unable to open file!");
-  //   echo fgets($myfile);
-  //   fclose($myfile);?>";
-  //   console.log(i);
-  //   return i;
-  // }
+
+//begin emotion
 
 setInterval(function () {
     $('#emotions').load("../Blue_eyes/hide_on_push/emotion_values.txt");
@@ -98,8 +87,7 @@ setInterval(function(){
 </style>
 
   <link rel="stylesheet" href="ui_2.css">
-  <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script-->
+
 </head>
 <?php
   $bg = array('backgroundtet.jpg', 'background1.jpg', 'background2.jpg', 'background3.jpg', 'background4.jpg', 'background5.jpg' ); // array of filenames
@@ -120,8 +108,7 @@ background-repeat:no-repeat;  background-attachment: fixed;
 background-position: 0px -16px;background-size: 100% 100%;
 }
 </style>
-<body> <!--background="static/robot/background_main_.jpg" style="background-repeat:no-repeat;  background-attachment: fixed;
-background-position: 0px -16px;background-size: 100% 100%;"-->
+<body> 
   <div class="container-fluid">
     <!-- chia space -->
       <div class="row">
@@ -130,20 +117,8 @@ background-position: 0px -16px;background-size: 100% 100%;"-->
       <div class="row">
         <div class="col-sm-12"><p></p></div>
       </div>
-      <!-- <div class="row">
-        <div class="col-sm-12"><p></p></div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12"><p></p></div>
-      </div> -->
-      <!-- <div class="row">
-        <div class="col-sm-12"><p></p></div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12"><p></p></div>
-      </div> -->
 
-    <!-- chia space -->
+    <!-- devide space -->
     <div class="row">
                 <div class="col-sm-6"><p></p></div>
       </div>
@@ -263,19 +238,15 @@ background-position: 0px -16px;background-size: 100% 100%;"-->
               <div class="col-sm-2" align="center"><div class="col-sm-1" align="center"><iframe src="http://free.timeanddate.com/clock/i73gna6l/n95/fs30/ftb/tt1/tw0/tm1" frameborder="0" width="186" height="36"></iframe></div>
               </div></p>
 
-              <!-- <div class="col-sm-1" align="left"> -->
 
             </div>
-            <!-- <div class="row" align="center"><img src="static/robot/sun.png" width="1%"> -->
-              <!-- weather widget start <div align="center" id="m-booked-small-t1-5172"> <div class="booked-weather-120x100 w100-bg" style="background-color:#ffffff; color:#333333; border-radius:4px; -moz-border-radius:4px; width:118px !important; border:none"> <a target="_blank" style="background-color:#2373ca; color:#ffffff;" href="https://www.booked.net/weather/da-nang-33810" class="booked-weather-120x100-city">Da Nang</a> <a target="_blank" class="booked-weather-120x100-bottom" href="https://www.booked.net/"><img src="//s.bookcdn.com/images/letter/s5.gif" alt="booked.net" /></a> <div class="booked-weather-120x100-degree w18"><span class="plus">+</span>22&deg;<sub class="booked-weather-120x100-type">C</sub></div> <div class="booked-weather-120x100-high-low"> <p>High: <span class="plus">+</span>23&deg;</p> <p>Low: <span class="plus">+</span>17&deg;</p> </div> <div style="background-color:#ffffff; color:#333333;" class="booked-weather-120x100-date">Sat, 04.01.2020</div> </div> </div><script type="text/javascript"> var css_file=document.createElement("link"); css_file.setAttribute("rel","stylesheet"); css_file.setAttribute("type","text/css"); css_file.setAttribute("href",'https://s.bookcdn.com/css/w/bw-120-100.css?v=0.0.1'); document.getElementsByTagName("head")[0].appendChild(css_file); function setWidgetData(data) { if(typeof(data) != 'undefined' && data.results.length > 0) { for(var i = 0; i < data.results.length; ++i) { var objMainBlock = document.getElementById('m-booked-small-t1-5172'); if(objMainBlock !== null) { var copyBlock = document.getElementById('m-bookew-weather-copy-'+data.results[i].widget_type); objMainBlock.innerHTML = data.results[i].html_code; if(copyBlock !== null) objMainBlock.appendChild(copyBlock); } } } else { alert('data=undefined||data.results is empty'); } } </script> <script type="text/javascript" charset="UTF-8" src="https://widgets.booked.net/weather/info?action=get_weather_info&ver=6&cityID=33810&type=11&scode=124&ltid=3458&domid=w209&anc_id=39288&cmetric=1&wlangID=1&color=ffffff&wwidth=118&header_color=2373ca&text_color=333333&link_color=ffffff&border_form=3&footer_color=ffffff&footer_text_color=333333&transparent=0"></script> weather widget end -->  
-            <!-- </div> -->
+
 
             <div class="row">
               
               <div class="col-sm-3"></div>
               <div class="col-sm-6" align="center"><a id="myframe6"></a></div>
               <div class="col-sm-3"></div>
-              <!-- <div class="col-sm-3"></div> -->
 
             </div>
 
@@ -299,9 +270,8 @@ background-position: 0px -16px;background-size: 100% 100%;"-->
                 <div class="row">
                   <div class="col-sm-6"><p></p></div>
                 </div><p id="myframe2" class="certificate"></p></div>
-              <!-- <div class="col-sm-3"></div> -->
               <div class="col-sm-3" align="center" >
-                <!--img src="static/robot/sayhi.gif" width="30%" height="100%"--><img src="static/welcome/changtraiaodai.png" width="95%" height="200%">
+               <img src="static/welcome/changtraiaodai.png" width="95%" height="200%">
               </div>
               
 
@@ -310,12 +280,9 @@ background-position: 0px -16px;background-size: 100% 100%;"-->
             <div class = "row">
                 
 
-                   <!-- <img src="static/robot/sayhi_1.gif" width="100%" > -->
-                <!-- </div> -->
                 <div class="col-sm-12" ><!-- <p align=" center"> -->
                   <marquee scrollamount="10" scrolldelay="30" style="height: 100%; width: 100%;">
                     <img src="haveanicedy.png" width="100%"> 
-                    <!--h1 style="color : red; font-size:70pt;font-family:arial;"--><!--p class = "event" >HAVE A NICE DAY</p-->
                   </marquee>
                 </div>
                 <div class="col-sm-2"></div>

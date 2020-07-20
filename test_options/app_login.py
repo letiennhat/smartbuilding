@@ -54,13 +54,6 @@ def uploadnhieuanh():
     key =  cursor.fetchone()[0]
     cursor.close()
     if str(key)=="1":
-    # try:
-    #     files = os.listdir(os.getcwd()+'/uploads')
-    #     for f in files:
-    #         print(f)
-    #         os.remove(os.getcwd()+'/uploads/'+f)
-    # except:
-    #     pass
 
         global photos
         # set session for image results
@@ -120,10 +113,6 @@ data_id = queue.Queue(maxsize=1)
 list_name = queue.Queue(maxsize=1)
 list_name_vang = queue.Queue(maxsize=1)
 data_rung = []
-# t = queue.Queue(maxsize=1)
-# list_SV = queue.Queue(maxsize=1)
-# ten_input = queue.Queue(maxsize=1)
-# ten_input = "HELLO ˆ_^"
 danhsachvang = ["a",'b']
 
 danhsachvang = ["a",'b']
@@ -134,18 +123,15 @@ donvi_dachon = "Ban Giám hiệu"
 bomon=queue.Queue(maxsize=1)
 bomon=""
 
-# list_name = ['']
 try:
      danhsachcomat = open('../Blue_eyes/regular_review/hour'+str(time.localtime(time.time()).tm_hour)+'.txt/'+\
         str(time.localtime(time.time()).tm_mon) +'_'+str(time.localtime(time.time()).tm_mday) +'_'+str(time.localtime(time.time()).tm_year)+'.txt','r')
      list_name=danhsachcomat.read().split('\n')
      danhsachcomat.close()
-     # re_name(list_name)
-     # time.sleep(2)
+
 except:
         danhsachcomat = open('../Blue_eyes/regular_review/hour'+str(time.localtime(time.time()).tm_hour)+'.txt/'+\
         str(time.localtime(time.time()).tm_mon) +'_'+str(time.localtime(time.time()).tm_mday) +'_'+str(time.localtime(time.time()).tm_year)+'.txt','w+')
-     # list_name=danhsachcomat.read().split('\n')
         danhsachcomat.close()
 def re_name(d):
     '''
@@ -153,7 +139,6 @@ def re_name(d):
     '''
     for i in range(len(d)):
         d[i]=namez(d[i])
-    #print(d)
 
     return d
 def name():
@@ -161,53 +146,37 @@ def name():
         không dùng
     '''
     global list_name
-   # global list_SV
     global list_name_vang   
-   # global ten_input
-   # 
-   # global t
+
     global bomon
     global sh
     global donvi_dachon
     global donvi
     while 1:
-      # bomon = loop_bomon(donvi_dachon)
       donvi = loop_donvi()
-      # time.sleep(2)
+
       danhsachcomat =["b", 'e']
       try:
          danhsachcomat = open('../Blue_eyes/regular_review/hour'+str(time.localtime(time.time()).tm_hour)+'.txt/'+\
             str(time.localtime(time.time()).tm_mon) +'_'+str(time.localtime(time.time()).tm_mday) +'_'+str(time.localtime(time.time()).tm_year)+'.txt','r')
          list_name=danhsachcomat.read().split('\n')
          danhsachcomat.close()
-         # re_name(list_name)
-         # time.sleep(2)
+
       except:
          pass
 def find_data_byid(id_):
   global database
   cursor = database.cursor()
-  #cursor.execute("use mysqldb1")
-  
-  # print(cursor.execute("show tables;"))
-  # cursor.execute("select gio from realtime_0 where id=10542")
 
-  # data = cursor.fetchall()
-  # cursor.close()
-  # cursor = database.cursor()
   
   cursor.execute("select id,hovaten,donvi,ngaysinh,gioitinh,chucvu,trinhdo,hocham,ngay,thang,nam,gio,url from realtime_0 where id={0} and nam={1}".format(str(id_),str(time.localtime(time.time()).tm_year)))
   
   data_11 = cursor.fetchall()
-  #database.commit()
-  # cursor1.close()
+
   cursor.close()
-  #database.close()
   return data_11
 def loop_realtime():
-    # global cursor
-    # global data
-    # global database
+
     try:
         global database
         cursor_looprealtime = database.cursor()
@@ -217,35 +186,14 @@ def loop_realtime():
         if str(key)=="1":
             global data_1
             global data_id
-            #global database
-            #while 1:
-            # database = pymysql.connect(host='localhost',
-            #                             user='be',
-            #                             password= 'blueeyes',
-            #                             autocommit=True,
-            #                             )
+
             try:
                 cursor_looprealtime = database.cursor()
-                # cursor1 = database.cursor()
-                #cursor.execute("use mysqldb1")
-                # cursor1.execute("use mysqldb1")
-                # print(cursor.execute("show tables;"))
-                # cursor.execute("select gio from realtime_0 where id=10542")
 
-                # data = cursor.fetchall()
-                # cursor.close()
-                # cursor = database.cursor()
                 cursor_looprealtime.execute("select id,hovaten,donvi,ngay,thang,nam,gio,phut,emotion,url from realtime_0 where ngay = {} and thang={} and nam = {}".format(str(time.localtime(time.time()).tm_mday),str(time.localtime(time.time()).tm_mon),str(time.localtime(time.time()).tm_year)))
-                # cursor.execute("select ngay,gio,hovaten,chucvu from realtime_0 where id=1")
-                # data_id = cursor1.fetchall()
-                data_1 = cursor_looprealtime.fetchall()
-                #print(data_1)
-                #print(len(data_1))
 
-                #database.commit()
-                # cursor1.close()
+                data_1 = cursor_looprealtime.fetchall()
                 cursor_looprealtime.close()
-                #database.close()
             except:
                 pass
         else:
@@ -364,7 +312,6 @@ def cut_box_face():
         pass
 
 
-# app.config["IMAGE_UPLOADS"] = "/home/blueeyes1/smartbuilding/smartbuilding/Blue_eyes/image_css/"
 @app.route('/uploadvideo',methods=['GET','POST'])
 def uploadvideo1():
     global database
@@ -378,7 +325,6 @@ def uploadvideo1():
             global id_
             print(id_)
 
-            # image = request.files['image']
             image = request.files["image"]
             filename = secure_filename(image.filename)
 
@@ -394,10 +340,7 @@ def uploadvideo1():
                 pass
             image.save(os.path.join(app.config["VIDEO_UPLOADS"]+str(id_)+'/',filename))
             video_url = app.config["VIDEO_UPLOADS"]+str(id_)+'/'+filename
-            #va_choose = request.form.get('reset_system')
-            #if va_choose == "Reset-System":
 
-                #keyboard.press('r')
             return render_template('uploadvideo.html',va = "đã upload thư mục url ="+'/home/blueeyes1/smartbuilding/smartbuilding/smartbuilding/Blue_eyes/video/'+str(id_)+'/',ba='input type=submit formaction=/uploadedvideo value=Begin-detect đã upload name=uploadedvideo')
         except:
             pass
@@ -448,15 +391,11 @@ def uploaded_data():
                 try:
                     if os.path.exists('../Blue_eyes/image_css/'+str(id_)):
                         pass
-                        #os.rename('/home/blueeyes1/smartbuilding/smartbuilding/Blue_eyes/image_css/'+str(id_),'/Users/letiennhat/racruoi/'+str(id(id_)))
                     else:
                         pass
                     for i in os.listdir(os.getcwd()+'/uploads'):
                         os.rename(os.getcwd()+'/uploads/'+i,'../Blue_eyes/image_css/'+str(id_)+'/'+i)
-                    #os.rename(os.getcwd() + '/uploads/','/home/blueeyes1/smartbuilding/smartbuilding/Blue_eyes/image_css/'+str(id_))
-                    #os.mkdir(os.getcwd() + '/uploads/')
                 except:
-                    #os.rename(os.getcwd() + '/uploads/','/home/blueeyes1/smartbuilding/smartbuilding/Blue_eyes/image_css/'+str(id_))
                     os.mkdir(os.getcwd() + '/uploads/')
                     pass
                 return render_template('resetsystem.html')
@@ -475,20 +414,17 @@ def hocnguoi_1():
     cursor.close()
     if str(key)=="1":
         try:
-            #global database
             global id_
             choose = str(request.form.get('text'))
             try:
                 if str(request.form.get('get_value_recording'))=="Stop-recording":
                     cursor = database.cursor()
-                    #cursor.execute("use mysqldb1")
                     cursor.execute("update learn_values set val = 2")
                     cursor.close()
                     cursor = database.cursor()
                     time.sleep(1)
                     cursor.execute("update learn_values set val = 0")
                     os.rename('video/outpy.avi','video/output1.avi')
-                    # cv2.VideoWriter('video/outpy.avi',cv2.VideoWriter_fourcc('M','J','P','G'), 10, (640,850))
                     database.commit()
                     cursor.close()
                     return render_template("uploadvideo.html",va="",ba="")
@@ -496,37 +432,21 @@ def hocnguoi_1():
             except:
                 pass
             if len(choose)>0 and str(choose) == str(id_):
-                #print(choose)
-                #print(str(request.form.get('get_value_recording')))
                 if (str(request.form.get('get_value_recording'))=="Start-Recording"):
                     #start recording and display button stop recording
                     cursor = database.cursor()
-                    #cursor.execute("use mysqldb1")
                     cursor.execute("update learn_values set val = 1")
-                    #print(1)
-                    #database.commit()
-                    #print(2)
                     cursor.close()
-                    #print(3)
-                    # return "OK"
-                    # return render_template('hocnguoi_step_2.html',va='''input type=submit  value = Stop-recording name =get_value_recording''')
-                    # recording_video.run(id_)
                     try:
-                        # threading.Thread(target=run_video).start()
-                        # run_video()
                         return render_template('hocnguoi_step_2.html',va='''input type=submit  value = Stop-recording name =get_value_recording''')
                     except:
                         return render_template('trangchu.html')
 
                 if (str(request.form.get('get_value_recording'))=="LOAD-AUTOMATION-LEARN"):
-                    #print(1293921391)
-                    #fi = open('../Blue_eyes/best/input_1.txt','w+')
-                    #fi.write(str(choose))
-                    #fi.close()
+
                     read_form(choose)
                     return "PRESS A (50 time) IN FRAME TO LEARN NEW PERSON"
                 
-                #return render_template('index1.html')
         except:
             pass
     else:
@@ -540,15 +460,12 @@ def reset_system():
     cursor.close()
     if str(key)=="1":
         try:
-            #global database
             if request.form.get('get_value_reset') == "RESET-NOW":
                 cursor = database.cursor()
-                #cursor.execute("use mysqldb1")
                 cursor.execute("update values_reset set val = 1")
                 cursor.close()
             elif request.form.get('get_value_reset') == "RESET-TIMER-00:00":
                 cursor = database.cursor()
-                #cursor.execute("use mysqldb1")
                 cursor.execute("update values_reset set val = 2")
                 cursor.close()
             else:
@@ -600,7 +517,6 @@ def realtime():
                 global data_1
                 data_2 = data_1[::-1]
                 return render_template('test_pysql.html',data=data_2)
-                #return render_template('hienthirealtime.html',lit_comat = list_name,)
             except:
                 return render_template('trangchu.html')
                 pass
@@ -639,18 +555,12 @@ def hienthi():
     key =  cursor.fetchone()[0]
     cursor.close()
     if str(key)=="1":
-        #global database
         try: 
-            # global data_id
-            # data_main = data_id[::-1]
-            #database = pymysql.connect('localhost','be', 'blueeyes',autocommit=True,)
+
             cursor = database.cursor()
-            #cursor.execute("use mysqldb1")
             cursor.execute("select distinct donvi from manager")
             donvi = cursor.fetchall()
-            #database.commit()
             cursor.close()
-            #database.close()
 
             choose = request.form.get('hienthi')
             if choose == 'Theo thời gian':
@@ -674,7 +584,6 @@ def save_data():
     if str(key)=="1":
         try:
             global id_
-            #global database
             id_input = request.form.get('id')
             hovaten = request.form.get('hovaten')
             ten = request.form.get('ten')
@@ -685,17 +594,6 @@ def save_data():
             chucvu_1 = request.form.get('chucvu')
             trinhdo = request.form.get('trinhdo')
             hocham = request.form.get('hocham')
-            #database = pymysql.connect('localhost','be', 'blueeyes',autocommit=True,)
-            #cursor = database.cursor()
-            #cursor.execute("use mysqldb1")
-            # while 1:
-            #   id_ = rd.randint(7000,10000000000)
-            #   cursor.execute("select maso from manager where maso={}".format(str(id_)))
-            #   if len(cursor.fetchall())<1:
-            #     print("ok")
-            #     break
-            #   else:
-            #     pass
             if len(id_input)>=1:
                 id_ = id_input
             else:
@@ -715,9 +613,7 @@ def save_data():
             check_id = cursor.fetchall()
             cursor.close()
             if len(check_id)>=1:
-                #database.commit()
                 
-                #database.close()
                 return render_template('hocnguoi.html',id_ = str(id_)+" Đã có trong database, xin mời kiểm tra lại, nếu bạn chắc chắn thì mời gữi ảnh vào để train")
             else:
                 
@@ -727,9 +623,7 @@ def save_data():
                 values_query = str(id_),hovaten,ten,ngaysinh,gioitinh,donvi_1,bomon_1,chucvu_1,trinhdo,hocham
                 cursor = database.cursor()
                 cursor.execute(query,values_query)
-                #database.commit()
                 cursor.close()
-                #database.close()
                 return render_template('hocnguoi.html',id_ = str(id_)+ " Hãy lưu lại mã số id của bạn để nhập vào thay vì nhập họ và tên")
         except:
             pass
@@ -741,7 +635,6 @@ def handle_base64(bs):
     try:
         global a
         image_64 = bs.encode("UTF-8");
-        # print(type(image_64))
         try:
             os.remove('static/'+a+'.jpg')
         except:
@@ -764,16 +657,9 @@ def hienthi_anh():
     if str(key)=="1":
         try:
             global data_2 
-            # print(data_2)
             global a
             choose = request.form.get('clicktoview')
             if not str(choose).startswith('-'):
-            # print(type(data_2))
-            # print(choose)
-            # print(choose)
-            # name = request.form.get('name_input')
-            # choose = str(data_2.index(choose))
-            # print(data_2[int(choose)][-1])
                 if "sbuilding" in (data_2[int(choose)][-1]):
                     a=data_2[int(choose)][-1]
                 else:
@@ -808,8 +694,6 @@ def name1():
         return render_template('trangchu.html')
 
 
-#app = Flask(__name__)
-# @app.route('/thongke')
 def thongke():
     global database
     cursor = database.cursor()
@@ -817,26 +701,19 @@ def thongke():
     key =  cursor.fetchone()[0]
     cursor.close()
     if str(key)=="1":
-        #global database
         cursor = database.cursor()
-        #cursor.execute("use mysqldb1")
         cursor.execute("select distinct donvi from manager")
         donvi_1=cursor.fetchall()
         cursor.close()
-        #print(donvi)
         x = []
         max_values = []
         for i in donvi_1:
             cursor = database.cursor()
-            #cursor.execute("use mysqldb1")
-            #print(i[0])
             cursor.execute("select count(id) from realtime_0 where donvi like '%{}%'".format(i[0]))
             value = cursor.fetchall()
-            #print(value)
             cursor.close()
             x.append([i[0],value[0][0]])
             max_values.append(value[0][0])
-        #print(x)
         max_val = max(max_values)
         return x,max_val
     else:
@@ -844,7 +721,6 @@ def thongke():
 
 	
 
-	#return render_template('chart.html',data1=x,max = max_val)
 
 @app.route('/hienthi_donvi_ten',methods=['GET','POST'])
 def hienthi_bomon(): 
@@ -857,14 +733,11 @@ def hienthi_bomon():
         try:
             global donvi_dachon
             global infor_result 
-            #global database  
             choose = request.form.get('choose_donvi_1')
             name = request.form.get('name_input')
             if choose =="unknown":
                 name = ""
-            #database = pymysql.connect('localhost','be', 'blueeyes',autocommit=True,)
-            
-            #cursor.execute("use mysqldb1")
+
             if len(name)>0:
                 cursor = database.cursor()
                 cursor.execute("select * from manager where donvi like '%{0}%' and hovaten like '%{1}%'".format(choose,standard_name(name)))
@@ -876,14 +749,9 @@ def hienthi_bomon():
                 data_rung = cursor.fetchall()
                 cursor.close()
             
-            #database.commit()
-            #cursor.close()
-            #database.close()
+
             return render_template('hienthi_ten.html',da=data_rung)
-            #infor_result = loop_ten(choose,name)
-            #return name1(data_rung)
-            #return redirect(url_for('name1')) # fucntion 
-            # print(len(name))
+
         except:
             return render_template('trangchu.html')
     else:
