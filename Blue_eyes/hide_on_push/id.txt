@@ -1,1 +1,1 @@
-{"id": "unknown", "emotion": "neutral", "time": 1594697686.629323, "evident_path": "sbuilding/unknown/unknown_14-07_10-34-46.jpg", "postprocessing": "/home/blueeyes1/smartbuilding/smartbuilding/smartbuilding/test_options/static/sbuilding/unknown/14-07_10-34-46"}
+{"id": "unknown", "emotion": "neutral", "time": 1595217071.887963, "evident_path": "sbuilding/unknown/unknown_20-07_10-51-11.jpg", "postprocessing": "/home/blueeyes1/smartbuilding/smartbuilding/smartbuilding/test_options/static/sbuilding/unknown/20-07_10-51-11"}
